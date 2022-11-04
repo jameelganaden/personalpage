@@ -1,0 +1,121 @@
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  hr.rounded {
+    border-top: 8px solid rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:'Courier New Bold', Courier, monospace;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  li {
+    border-right: 1px solid #bbb;
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  .active {
+    background-color: #e68311;
+  }
+
+  body{
+    background-image: url('8bitbg.jpeg');
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: rgb(213, 90, 20);
+    color: white;
+  }
+
+  .open{
+    text-align: justify;
+    font-size: 30px;
+    padding-right:15px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+  }
+
+  .intro{
+    float: left;
+    padding-right:15px;
+    border-radius: 30px;
+      
+  }
+  
+  p{
+      text-align: justify;
+      font-size: 30px;
+      padding-right:15px;
+      color: white;
+      font-family:'Courier New', Courier, monospace;
+  }
+
+  .finale{
+    text-align: center;
+    font-size: 40px;
+    padding-right:15px;
+    color: white;
+    font-family:'Courier New Bold', Courier, monospace;
+  }
+
+  .contactDetails{
+    text-align: center;
+    font-size: 15px;
+    padding-right:15px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+  }
+
+  .contacts{
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: center;
+
+  }

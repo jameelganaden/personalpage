@@ -3,6 +3,11 @@
     overflow: hidden;
   }
 
+  hr.rounded {
+    border-top: 8px solid rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -95,10 +100,7 @@ p{
     font-family:'Courier New', Courier, monospace;
 }
 
-hr.rounded {
-  border-top: 8px solid rgb(255, 255, 255);
-  border-radius: 5px;
-}
+
 
 h1 { 
   text-align: center; 
@@ -107,7 +109,7 @@ h1 {
 }
 
 .project {
-  float: left;
+  float:left;
   width: 33.33%;
   padding: 0px;
   border-radius: 10% 25%;
@@ -116,7 +118,10 @@ h1 {
 .projects::after {
   content: "";
   clear: both;
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 
@@ -148,6 +153,14 @@ h1 {
   min-width: 300px;
   margin-left: 10px;
   animation: slide 15s linear infinite;
+}
+
+.contacts{
+  display: flex;
+  justify-content: space-around;
+  justify-content: space-between;
+  justify-content: center;
+
 }
 
 
