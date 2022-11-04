@@ -96,6 +96,38 @@
       font-family:'Courier New', Courier, monospace;
   }
 
+  .button {
+    display: flex;
+    border: none;
+    color: white;
+    padding: 25px 50px;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    justify-content: center;
+  }
+
+  .button2 {
+    display: flex;
+    background-color: white; 
+    color: e68311; 
+    border: 2px solid #e68311;
+    justify-content: center;
+  }
+  
+  .button2:hover {
+    display: flex;
+    background-color: #e68311;
+    color: white;
+    justify-content: center;
+  }
+  
+
   .finale{
     text-align: center;
     font-size: 40px;
