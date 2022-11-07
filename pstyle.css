@@ -71,6 +71,28 @@
     color: white;
   }
 
+  .gameProject{
+    float: left;
+    padding-right:15px;
+    border-radius: 30px;
+  }
+
+  .nightmareIntro{
+    text-align: center;
+    font-size: 35px;
+    padding-right:15px;
+    color: white;
+    font-family:'Courier New Bold', Courier, monospace;
+  }
+
+  p{
+    text-align: justify;
+    font-size: 30px;
+    padding-right:15px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+}
+
   .contacts{
     display: flex;
     flex-direction: row;
