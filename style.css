@@ -29,7 +29,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family:'Courier New Bold', Courier, monospace;
+    font-family:'Gill-Sans', sans-serif;
   }
   
   li a:hover {
@@ -74,14 +74,14 @@
 .statement{
     color:rgb(255, 255, 255);
     font-size:10vh;
-    font-family:'Courier New Bold', Courier, monospace;
+    font-family:'Gill-Sans', sans-serif;
     text-align:center;
 }
 
 .substate{
   color:rgb(255, 255, 255);
   font-size:4vh;
-  font-family:'Courier New Bold', Courier, monospace;
+  font-family:'Gill-Sans', sans-serif;
   text-align:center;
 }
 
@@ -93,66 +93,16 @@
 }
 
 p{
-    text-align: justify;
-    font-size: 35px;
+    font-size: 20px;
     padding-right:15px;
     color: white;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Gill-Sans', sans-serif;
 }
-
-
 
 h1 { 
   text-align: center; 
   color: white;
   font-family:'Courier New', Courier, monospace;
-}
-
-.project {
-  float:left;
-  width: 33.33%;
-  padding: 0px;
-  border-radius: 10% 25%;
-}
-
-.projects::after {
-  content: "";
-  clear: both;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-
-.carousel {
-  overflow: hidden;
-  display: flex;
-  height: 500px;
-  width: 1500px;
-  margin: 0 auto;
-}
-
-.carousel div {
-  height: 400px;
-  min-width: 300px;
-  margin-left: 100px;
-}
-
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-2175px, 0, 0); /* The image width */
-  }
-}
-
-.carousel div {
-  height: 400px;
-  min-width: 300px;
-  margin-left: 10px;
-  animation: slide 15s linear infinite;
 }
 
 .contacts{
