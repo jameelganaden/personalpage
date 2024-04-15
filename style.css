@@ -76,6 +76,7 @@ header nav:hover > a:not(:hover) {
     color: white;
     position: relative;
     z-index: 100;
+    font-size: 20px;
 }
 .about h1 {
     font-size: 40px;
