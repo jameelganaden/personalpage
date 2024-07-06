@@ -82,6 +82,18 @@ header nav:hover > a:not(:hover) {
     font-size: 40px;
 }
 
+.eds124br {
+  padding: 50px;
+  background: #3B3291;
+  color: white;
+  position: relative;
+  z-index: 100;
+  font-size: 20px;
+}
+.eds124br h1 {
+  font-size: 40px;
+}
+
 .clicker h2 {
   padding: 10px;
   padding-left: 50px;
