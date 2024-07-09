@@ -71,18 +71,28 @@ header nav:hover > a:not(:hover) {
 }
 
 .about {
-    padding: 10px 0; /* Adjust vertical padding as needed */
+    padding: 50px 0;
     background: #3B3291;
     color: white;
     position: relative;
     z-index: 100;
     font-size: 20px;
+    text-align: center; /* Center the content horizontally */
 }
 
 .about-content {
-    max-width: 800px; /* Adjust the max-width as needed */
-    margin: 0 auto; /* Center the inner content */
-    padding: 0 20px; /* Add horizontal padding for inner content */
+    background: #0d2229;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 20px auto; /* Center the box horizontally */
+    max-width: 800px; /* Adjust max-width as needed */
+}
+
+.about-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about h1 {
