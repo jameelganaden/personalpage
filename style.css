@@ -46,7 +46,7 @@ header nav:hover > a:not(:hover) {
 
 .home {
     display: flex;
-    height: 100dvh;
+    height: 80dvh;
     background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
     position: relative;
     overflow: hidden;
@@ -160,3 +160,12 @@ header nav:hover > a:not(:hover) {
   border-radius: 10px; /* Optional rounded corners */
 }
 
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #5247B9;
+    color: white;
+    position: relative;
+    z-index: 100;
+    font-size: 16px;
+}
