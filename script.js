@@ -43,19 +43,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const projects = document.querySelectorAll('.project');
+    const overlay = document.getElementById('overlay');
 
     projects.forEach(project => {
         project.addEventListener('click', function() {
-            this.querySelector('.project-details').classList.toggle('open');
+            if (!this.classList.contains('expanded')) {
+                closeAllProjects(); // Close any open projects
+                this.classList.add('expanded');
+                overlay.style.display = 'block';
+                document.body.classList.add('no-scroll');
+            }
         });
 
-        const closeBtns = project.querySelectorAll('.close');
-        closeBtns.forEach(closeBtn => {
-            closeBtn.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevents the project from closing on close button click
-                this.closest('.project-details').classList.remove('open');
-            });
+        const closeBtn = project.querySelector('.close-btn');
+        closeBtn.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevents the project from closing on close button click
+            closeProject(project);
         });
     });
-});
 
+    overlay.addEventListener('click', function() {
+        closeAllProjects();
+    });
+
+    function closeProject(project) {
+        project.classList.remove('expanded');
+        project.style.transform = ''; // Reset transform property
+        project.style.boxShadow = ''; // Reset box-shadow property
+        overlay.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+
+    function closeAllProjects() {
+        projects.forEach(project => {
+            project.classList.remove('expanded');
+            project.style.transform = ''; // Reset transform property
+            project.style.boxShadow = ''; // Reset box-shadow property
+        });
+        overlay.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+});
