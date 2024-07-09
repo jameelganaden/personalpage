@@ -58,8 +58,22 @@ header nav:hover > a:not(:hover) {
     background: none;
 }
 
+.title-section {
+    padding: 150px 5% 10px; /* Adjusted padding to reduce gap */
+}
+
+.title-section h1 {
+    font-size: 36px;
+    color: white; /* Change to white for better contrast */
+    text-align: left;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Soft dark outline around the text */
+}
+
+
+
 .projects {
-    padding: 150px 5% 50px 5%; /* Adjusted padding to account for fixed header */
+    padding: 0px 5% 50px 5%; /* Adjusted padding to account for fixed header */
     flex: 1;
 }
 
@@ -137,3 +151,11 @@ footer {
     background: rgba(0, 0, 0, 0.8);
     color: white;
 }
+
+ /* 
+ IMPLEMENTATION NOTES:
+ - create new smaller descriptions for the projects
+ - make these clickable to open up the project into a bigger window that can also include pictures and media below
+ - make sure these windows are closable with a click of a close button in the corner
+ - add a simple animation to the closing of the windows
+ /*
