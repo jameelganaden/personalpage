@@ -94,3 +94,32 @@ header nav:hover > a:not(:hover) {
   font-size: 40px;
 }
 
+.modules3_5, .modules7_9 {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 10px; /* Spacing between titles and videos */
+}
+
+.modules3_5 span, .modules7_9 span {
+  flex: 1;
+  margin: 0 10px; /* Adjust spacing between titles */
+}
+
+.vids3_5, .vids7_9 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vids3_5 iframe, .vids7_9 iframe {
+  flex: 1;
+  margin: 0 10px; /* Adjust spacing between videos */
+  width: calc(33.33% - 20px); /* Adjust width to fit within container */
+  aspect-ratio: 16 / 9;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow for additional pop */
+  border: 5px solid white; /* White border around videos */
+  background-color: white; /* Ensure border color consistency */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
