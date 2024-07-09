@@ -68,7 +68,7 @@ header nav:hover > a:not(:hover) {
     height: 350px;
     border-radius: 50%; /* Make the image circular */
     object-fit: cover; /* Ensure the image covers the entire container */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the image */
 }
 
 .contact {
