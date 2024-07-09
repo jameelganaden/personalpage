@@ -42,19 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const expandBtns = document.querySelectorAll('.expand-btn');
-    const projectDetails = document.querySelectorAll('.project-details');
+    const projects = document.querySelectorAll('.project');
 
-    expandBtns.forEach((btn, index) => {
-        btn.addEventListener('click', function() {
-            projectDetails[index].classList.add('open');
+    projects.forEach(project => {
+        project.addEventListener('click', function() {
+            this.querySelector('.project-details').classList.toggle('open');
         });
 
-        const closeBtns = document.querySelectorAll('.close');
+        const closeBtns = project.querySelectorAll('.close');
         closeBtns.forEach(closeBtn => {
-            closeBtn.addEventListener('click', function() {
-                projectDetails[index].classList.remove('open');
+            closeBtn.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevents the project from closing on close button click
+                this.closest('.project-details').classList.remove('open');
             });
         });
     });
 });
+

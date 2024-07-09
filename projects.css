@@ -59,7 +59,8 @@ header nav:hover > a:not(:hover) {
 }
 
 .title-section {
-    padding: 150px 5% 10px; /* Adjusted padding to reduce gap */
+    padding: 150px 5% 20px; /* Adjusted padding to reduce gap */
+    position: relative;
 }
 
 .title-section h1 {
@@ -67,10 +68,8 @@ header nav:hover > a:not(:hover) {
     color: white; /* Change to white for better contrast */
     text-align: left;
     margin-bottom: 20px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /* Soft dark outline around the text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Soft dark outline around the text */
 }
-
-
 
 .projects {
     padding: 0px 5% 50px 5%; /* Adjusted padding to account for fixed header */
@@ -101,50 +100,6 @@ header nav:hover > a:not(:hover) {
     line-height: 1.6;
 }
 
-.project-details {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-}
-
-.project-details.open {
-    display: block;
-    animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #888;
-}
-
-.close:hover {
-    color: #333;
-}
-
-
 footer {
     text-align: center;
     padding: 20px;
@@ -152,10 +107,9 @@ footer {
     color: white;
 }
 
- /* 
- IMPLEMENTATION NOTES:
- - create new smaller descriptions for the projects
- - make these clickable to open up the project into a bigger window that can also include pictures and media below
- - make sure these windows are closable with a click of a close button in the corner
- - add a simple animation to the closing of the windows
- /*
+/* IMPLEMENTATION NOTES:
+- create new smaller descriptions for the projects
+- make these clickable to open up the project into a bigger window that can also include pictures and media below
+- make sure these windows are closable with a click of a close button in the corner
+- add a simple animation to the closing of the windows
+*/
