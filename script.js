@@ -18,3 +18,24 @@ document.addEventListener('scroll', function() {
     mount1.style.marginBottom = -value * 1.1 + 'px'
     mount2.style.marginBottom = -value * 1.2 + 'px'
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const collapsibleHeaders = document.querySelectorAll('.collapsible');
+
+    collapsibleHeaders.forEach(header => {
+        const content = header.nextElementSibling; // Get the content next to the header
+
+        // Initially set the content to display block (uncollapsed)
+        content.style.height = content.scrollHeight + 'px'; // Set height to its natural height
+
+        header.addEventListener('click', function() {
+            const isCollapsed = header.classList.toggle('collapsed');
+
+            if (isCollapsed) {
+                content.style.height = '0px'; // Collapse the content
+            } else {
+                content.style.height = content.scrollHeight + 'px'; // Expand the content
+            }
+        });
+    });
+});

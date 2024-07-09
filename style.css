@@ -94,18 +94,41 @@ header nav:hover > a:not(:hover) {
     line-height: 1.6; /* Adjust line height for better readability */
 }
 
+/* Existing styles */
 .eds124br {
-  padding: 50px;
-  background: #3B3291;
-  color: white;
-  position: relative;
-  z-index: 100;
-  font-size: 20px;
+    padding: 50px;
+    background: #3B3291;
+    color: white;
+    position: relative;
+    z-index: 100;
+    font-size: 20px;
 }
-.eds124br h1 {
-  padding: 20px 0; /* Adjust vertical padding as needed */
-  font-size: 40px;
-  text-align: center; /* Center the heading */
+
+.eds124br h1.collapsible {
+    cursor: pointer;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.eds124br .content {
+    display: block; /* Initially show the content */
+    transition: height 0.5s ease-in-out; /* Transition for height change */
+    overflow: hidden; /* Hide overflowing content */
+    height: auto; /* Set initial height to auto */
+}
+
+.eds124br.collapsed .content {
+    height: 0; /* Collapse the content when parent is collapsed */
+}
+
+/* Styles for the divider */
+.divider {
+    width: 50%;
+    margin: 20px auto;
+    border-top: 2px solid white; /* White line */
+    border-radius: 1px; /* Optional: round ends */
 }
 
 .modules3_5, .modules7_9 {
