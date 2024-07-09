@@ -40,3 +40,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const expandBtns = document.querySelectorAll('.expand-btn');
+    const projectDetails = document.querySelectorAll('.project-details');
+
+    expandBtns.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            projectDetails[index].classList.add('open');
+        });
+
+        const closeBtns = document.querySelectorAll('.close');
+        closeBtns.forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                projectDetails[index].classList.remove('open');
+            });
+        });
+    });
+});
