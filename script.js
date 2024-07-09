@@ -24,12 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     collapsibleHeaders.forEach(header => {
         const content = header.nextElementSibling; // Get the content next to the header
+        const parentSection = header.closest('.eds124br'); // Get the parent section
 
         // Initially set the content to display block (uncollapsed)
         content.style.height = content.scrollHeight + 'px'; // Set height to its natural height
 
         header.addEventListener('click', function() {
-            const isCollapsed = header.classList.toggle('collapsed');
+            const isCollapsed = parentSection.classList.toggle('collapsed');
 
             if (isCollapsed) {
                 content.style.height = '0px'; // Collapse the content

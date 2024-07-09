@@ -104,6 +104,17 @@ header nav:hover > a:not(:hover) {
     line-height: 1.6; /* Adjust line height for better readability */
 }
 
+/* Style for the dropdown icon */
+.dropdown-icon {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the icon when the section is collapsed */
+.eds124br.collapsed .dropdown-icon {
+    transform: rotate(180deg);
+}
+
 /* Existing styles */
 .eds124br {
     padding: 50px;
