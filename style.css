@@ -71,7 +71,7 @@ header nav:hover > a:not(:hover) {
 }
 
 .about {
-    padding: 20px 0; /* Adjust vertical padding as needed */
+    padding: 10px 0; /* Adjust vertical padding as needed */
     background: #3B3291;
     color: white;
     position: relative;
