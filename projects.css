@@ -179,3 +179,13 @@ body.no-scroll {
 .project.expanded .project-details {
     display: block; /* Display project details when expanded */
 }
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: relative;
+    z-index: 100;
+    font-size: 16px;
+}

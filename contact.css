@@ -7,8 +7,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+html, body {
     background: linear-gradient(to top, #D2E2FB 30%, #86A8DB); /* Same gradient as the .home section */
+    height: 100%;
 }
 
 header {
@@ -21,14 +22,17 @@ header {
     width: 100%;
     z-index: 100;
 }
+
 header h1 {
     font-size: 40px;
     color: white;
 }
+
 header nav {
     display: flex;
     gap: 30px;
 }
+
 header nav a {
     text-decoration: none;
     font-size: 20px;
@@ -38,22 +42,40 @@ header nav a {
     transition: 0.3s;
     color: white;
 }
+
 header nav a.active {
     background: #5247B9;
 }
+
 header nav a:hover {
     background: #5247B9;
 }
+
 header nav:hover > a:not(:hover) {
     background: none;
+}
+
+.portrait {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 50vh; /* Adjust the height as needed */
+    margin-bottom: 20px; /* Add margin bottom for gap */
+}
+
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
-    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB); /* Ensures full section background */
+    margin-top: 20px; /* Add margin top for gap */
 }
 
 .contact-info {
