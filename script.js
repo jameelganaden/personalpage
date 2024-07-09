@@ -46,10 +46,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay');
 
     projects.forEach(project => {
+        project.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('expanded')) {
+                this.classList.add('hovered');
+            }
+        });
+
+        project.addEventListener('mouseleave', function() {
+            if (!this.classList.contains('expanded')) {
+                this.classList.remove('hovered');
+            }
+        });
+
         project.addEventListener('click', function() {
             if (!this.classList.contains('expanded')) {
                 closeAllProjects(); // Close any open projects
                 this.classList.add('expanded');
+                this.classList.remove('hovered'); // Remove hover effect when expanded
                 overlay.style.display = 'block';
                 document.body.classList.add('no-scroll');
             }
@@ -84,3 +97,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('no-scroll');
     }
 });
+

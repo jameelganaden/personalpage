@@ -60,7 +60,7 @@ header nav:hover > a:not(:hover) {
     justify-content: center;
     align-items: end;
     height: 50vh; /* Adjust the height as needed */
-    margin-bottom: 20px; /* Add margin bottom for gap */
+    margin-bottom: 40px; /* Add margin bottom for gap */
 }
 
 .profile-pic {
@@ -68,7 +68,7 @@ header nav:hover > a:not(:hover) {
     height: 350px;
     border-radius: 50%; /* Make the image circular */
     object-fit: cover; /* Ensure the image covers the entire container */
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.5); /* Add shadow to the image */
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3); /* Add shadow to the image */
 }
 
 .contact {
