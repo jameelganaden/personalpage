@@ -58,7 +58,7 @@ header nav:hover > a:not(:hover) {
 
 .home {
     display: flex;
-    min-height: 120vh; /* Use min-height to ensure it extends at least to the bottom */
+    min-height: 110vh; /* Use min-height to ensure it extends at least to the bottom */
     background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
     position: relative;
     overflow: hidden;
