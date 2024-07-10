@@ -153,7 +153,7 @@ header nav:hover > a:not(:hover) {
 
 .about-extra .gallery img {
     max-width: 250px; /* Ensure images do not exceed container width */
-    max-height: 25px; /* Ensure images do not exceed container height */
+    max-height: 250px; /* Ensure images do not exceed container height */
     object-fit: cover; /* Maintain aspect ratio and fit inside container */
     transition: opacity 1s ease-in-out; /* Fade transition */
     opacity: 0; /* Initially hide all images */
