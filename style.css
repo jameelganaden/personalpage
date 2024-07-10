@@ -147,17 +147,18 @@ header nav:hover > a:not(:hover) {
     overflow: hidden;
     display: flex; /* Ensures images stay in line */
     justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Center the images vertically */
+    align-items:last baseline; /* Center the images vertically */
     margin: 0 auto; /* Center the gallery within the box */
 }
 
 .about-extra .gallery img {
-    max-width: 100%; /* Ensure images do not exceed container width */
-    max-height: 100%; /* Ensure images do not exceed container height */
-    object-fit: contain; /* Maintain aspect ratio and fit inside container */
+    max-width: 250px; /* Ensure images do not exceed container width */
+    max-height: 25px; /* Ensure images do not exceed container height */
+    object-fit: cover; /* Maintain aspect ratio and fit inside container */
     transition: opacity 1s ease-in-out; /* Fade transition */
     opacity: 0; /* Initially hide all images */
     position: absolute; /* Position absolutely to overlap */
+    border-radius: 10px;
 }
 
 .about-extra .gallery img.active {
