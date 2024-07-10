@@ -133,7 +133,7 @@ header nav:hover > a:not(:hover) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 5%;
-    width: 400px; /* Set width to 500px to match .about-content */
+    width: 400px; /* Ensure the right box width remains 400px */
     height: 90%;
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 1;
@@ -142,19 +142,22 @@ header nav:hover > a:not(:hover) {
 
 .about-extra .gallery {
     position: relative;
-    width: 400px; /* Fixed width of the gallery */
-    height: 300px; /* Fixed height of the gallery */
+    width: 360px; /* Set width smaller than the right box width */
+    height: 270px; /* Set height smaller than the right box height */
     overflow: hidden;
     display: flex; /* Ensures images stay in line */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Center the images vertically */
+    margin: 0 auto; /* Center the gallery within the box */
 }
 
 .about-extra .gallery img {
-    flex: 1; /* Distribute space evenly among images */
     max-width: 100%; /* Ensure images do not exceed container width */
     max-height: 100%; /* Ensure images do not exceed container height */
     object-fit: contain; /* Maintain aspect ratio and fit inside container */
     transition: opacity 1s ease-in-out; /* Fade transition */
     opacity: 0; /* Initially hide all images */
+    position: absolute; /* Position absolutely to overlap */
 }
 
 .about-extra .gallery img.active {
