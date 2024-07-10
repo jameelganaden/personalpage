@@ -124,18 +124,18 @@ header nav:hover > a:not(:hover) {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: calc(100% - 200px); /* Adjust width to be smaller on the sides */
+    max-width: 800px; /* Limit maximum width if needed */
     max-height: 80%;
-    transform: translate(-50%, -50%); /* Remove this line or adjust it */
+    transform: translate(-50%, -50%); /* Center the box */
     z-index: 1000;
     overflow-y: auto;
     background: rgba(255, 255, 255, 1);
-    padding: 40px;
+    padding: 40px 40px 20px; /* Adjust padding: top, right/left, bottom */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     cursor: default;
     pointer-events: auto;
-    padding: 30px 4% 50px 5%;
 }
 
 .project.expanded .short-description {
@@ -166,7 +166,7 @@ header nav:hover > a:not(:hover) {
 .project.expanded .project-details {
     display: block; /* Display project details when expanded */
     opacity: 1;
-    margin-top: 20px; /* Adjust margin top as needed */
+    margin-top: 10px; /* Adjust margin top as needed */
 }
 
 #overlay {
