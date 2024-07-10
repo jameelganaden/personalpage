@@ -124,17 +124,18 @@ header nav:hover > a:not(:hover) {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
+    max-height: 80%;
+    transform: translate(-50%, -50%); /* Remove this line or adjust it */
     z-index: 1000;
     overflow-y: auto;
     background: rgba(255, 255, 255, 1);
+    padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    cursor: default; /* Prevents the hover effect when expanded */
+    cursor: default;
     pointer-events: auto;
-    width: 80%;
-    max-height: 80%;
-    padding: 40px;
+    padding: 30px 4% 50px 5%;
 }
 
 .project.expanded .close-btn {

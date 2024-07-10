@@ -50,10 +50,18 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!this.classList.contains('expanded')) {
                 closeAllProjects(); // Close any open projects
                 this.classList.add('expanded');
+                this.classList.remove('hovered'); // Remove hover effect when expanded
                 overlay.style.display = 'block';
                 document.body.classList.add('no-scroll');
-            } else {
-                closeProject(this);
+
+                // Animate expand
+                const projectDetails = this.querySelector('.project-details');
+                const height = projectDetails.scrollHeight;
+
+                projectDetails.style.height = '0px'; // Start with 0 height
+                setTimeout(() => {
+                    projectDetails.style.height = height + 'px'; // Expand to full height
+                }, 10); // Delay to ensure initial height setting takes effect
             }
         });
 
@@ -69,18 +77,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function closeProject(project) {
-        project.classList.remove('expanded');
-        overlay.style.display = 'none';
-        document.body.classList.remove('no-scroll');
+        const projectDetails = project.querySelector('.project-details');
+        const height = projectDetails.scrollHeight;
+
+        // Animate collapse
+        projectDetails.style.height = height + 'px'; // Set to current height
+        setTimeout(() => {
+            projectDetails.style.height = '0px'; // Collapse to 0 height
+            project.classList.remove('expanded');
+            overlay.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }, 10); // Delay to ensure height transition takes effect
     }
 
     function closeAllProjects() {
         projects.forEach(project => {
-            project.classList.remove('expanded');
+            if (project.classList.contains('expanded')) {
+                closeProject(project);
+            }
         });
-        overlay.style.display = 'none';
-        document.body.classList.remove('no-scroll');
     }
 });
-
-
