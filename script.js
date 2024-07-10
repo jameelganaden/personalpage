@@ -98,3 +98,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutContent = document.querySelector('.about-content');
+
+    aboutContent.addEventListener('click', function() {
+        aboutContent.classList.toggle('expanded');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.about-extra .gallery img');
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    function nextSlide() {
+        const currentImage = images[currentIndex];
+        const nextIndex = (currentIndex + 1) % totalImages;
+        const nextImage = images[nextIndex];
+
+        currentImage.classList.remove('active');
+        nextImage.classList.add('active');
+
+        currentIndex = nextIndex;
+    }
+
+    // Initially show the first image
+    images[currentIndex].classList.add('active');
+
+    setInterval(nextSlide, 3000); // Change image every 3 seconds
+});

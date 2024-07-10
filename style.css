@@ -90,7 +90,12 @@ header nav:hover > a:not(:hover) {
     position: relative;
     z-index: 100;
     font-size: 20px;
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
+}
+
+.about-wrapper {
+    position: relative;
+    display: inline-block;
 }
 
 .about-content {
@@ -98,17 +103,89 @@ header nav:hover > a:not(:hover) {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto; /* Center the box horizontally */
-    max-width: 800px; /* Adjust max-width as needed */
+    margin: 20px auto;
+    max-width: 500px; /* Set max-width to 500px */
+    transition: all 0.5s ease;
+    z-index: 2;
+    position: relative;
 }
 
 .about h1 {
     font-size: 40px;
-    text-align: center; /* Center the heading */
+    text-align: center;
 }
 
 .about p {
-    line-height: 1.6; /* Adjust line height for better readability */
+    line-height: 1.6;
+}
+
+.about-extra {
+    background: #0d2229;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 5%;
+    width: 400px; /* Set width to 500px to match .about-content */
+    height: 90%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 1;
+    opacity: 0;
+}
+
+.about-extra .gallery {
+    position: relative;
+    width: 400px; /* Fixed width of the gallery */
+    height: 300px; /* Fixed height of the gallery */
+    overflow: hidden;
+    display: flex; /* Ensures images stay in line */
+}
+
+.about-extra .gallery img {
+    flex: 1; /* Distribute space evenly among images */
+    max-width: 100%; /* Ensure images do not exceed container width */
+    max-height: 100%; /* Ensure images do not exceed container height */
+    object-fit: contain; /* Maintain aspect ratio and fit inside container */
+    transition: opacity 1s ease-in-out; /* Fade transition */
+    opacity: 0; /* Initially hide all images */
+}
+
+.about-extra .gallery img.active {
+    opacity: 1; /* Show active image */
+}
+
+.left-box {
+    left: 0;
+    transform: translateX(0);
+}
+
+.right-box {
+    right: 0;
+    transform: translateX(0);
+}
+
+.about-content.expanded ~ .about-extra {
+    opacity: 1;
+}
+
+.about-content.expanded ~ .left-box {
+    transform: translateX(-420px); /* Adjusted to account for the gap */
+}
+
+.about-content.expanded ~ .right-box {
+    transform: translateX(420px); /* Adjusted to account for the gap */
+}
+
+.about-content:not(.expanded) ~ .about-extra {
+    opacity: 0;
+}
+
+.about-content:not(.expanded) ~ .left-box {
+    transform: translateX(0);
+}
+
+.about-content:not(.expanded) ~ .right-box {
+    transform: translateX(0);
 }
 
 /* Style for the dropdown icon */
