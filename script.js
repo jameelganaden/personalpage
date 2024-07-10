@@ -46,25 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.getElementById('overlay');
 
     projects.forEach(project => {
-        project.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('expanded')) {
-                this.classList.add('hovered');
-            }
-        });
-
-        project.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('expanded')) {
-                this.classList.remove('hovered');
-            }
-        });
-
         project.addEventListener('click', function() {
             if (!this.classList.contains('expanded')) {
                 closeAllProjects(); // Close any open projects
                 this.classList.add('expanded');
-                this.classList.remove('hovered'); // Remove hover effect when expanded
                 overlay.style.display = 'block';
                 document.body.classList.add('no-scroll');
+            } else {
+                closeProject(this);
             }
         });
 
@@ -81,8 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeProject(project) {
         project.classList.remove('expanded');
-        project.style.transform = ''; // Reset transform property
-        project.style.boxShadow = ''; // Reset box-shadow property
         overlay.style.display = 'none';
         document.body.classList.remove('no-scroll');
     }
@@ -90,11 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeAllProjects() {
         projects.forEach(project => {
             project.classList.remove('expanded');
-            project.style.transform = ''; // Reset transform property
-            project.style.boxShadow = ''; // Reset box-shadow property
         });
         overlay.style.display = 'none';
         document.body.classList.remove('no-scroll');
     }
 });
+
 

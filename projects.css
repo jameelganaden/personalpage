@@ -65,6 +65,7 @@ header nav:hover > a:not(:hover) {
 }
 
 .title-section h1 {
+    padding: 0 5.5%;
     font-size: 36px;
     color: white;
     text-align: left;
@@ -72,16 +73,20 @@ header nav:hover > a:not(:hover) {
 }
 
 .title-section h2 {
+    padding: 0 5.5%;
     font-size: 20px;
     color: white;
     text-align: left;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .projects {
-    padding: 0px 5% 50px 5%;
+    padding: 0px 30% 50px 5%;
     flex: 1;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack projects vertically */
+    padding: 0 10%;
 }
 
 /* Style for the short description */
@@ -102,42 +107,34 @@ header nav:hover > a:not(:hover) {
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for transform and box-shadow */
+    transition: transform 0.3s, box-shadow 0.3s, height 0.5s; /* Add transitions for transform, box-shadow, and height */
 }
 
 .project:hover {
     transform: translateY(-5px); /* Example transformation */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Example box shadow */
+    background-color: rgba(201, 191, 255, 0.9);
 }
 
 .project .close-btn {
     display: none;
 }
 
-.project.expanded .short-description {
-    opacity: 0; /* Hide short description when expanded */
-}
-
-.project.expanded .project-details {
-    display: block;
-}
-
 .project.expanded {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
-    max-height: 80%;
     transform: translate(-50%, -50%);
     z-index: 1000;
     overflow-y: auto;
     background: rgba(255, 255, 255, 1);
-    padding: 40px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     cursor: default; /* Prevents the hover effect when expanded */
     pointer-events: auto;
+    width: 80%;
+    max-height: 80%;
+    padding: 40px;
 }
 
 .project.expanded .close-btn {
@@ -161,6 +158,12 @@ header nav:hover > a:not(:hover) {
     background: darkred; /* Darken the background on hover */
 }
 
+.project.expanded .project-details {
+    display: block; /* Display project details when expanded */
+    opacity: 1;
+    margin-top: 20px; /* Adjust margin top as needed */
+}
+
 #overlay {
     display: none;
     position: fixed;
@@ -179,10 +182,8 @@ body.no-scroll {
 
 .project-details {
     display: none; /* Initially hide project details */
-}
-
-.project.expanded .project-details {
-    display: block; /* Display project details when expanded */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Add opacity transition */
 }
 
 footer {
