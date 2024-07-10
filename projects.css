@@ -138,6 +138,10 @@ header nav:hover > a:not(:hover) {
     padding: 30px 4% 50px 5%;
 }
 
+.project.expanded .short-description {
+    display: none;
+}
+
 .project.expanded .close-btn {
     display: block;
     position: absolute;
