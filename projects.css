@@ -13,15 +13,15 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    transition: filter 0.3s ease; /* Add transition for filter property */
+    transition: filter 0.3s ease;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px; /* Increased height to accommodate the logo */
-    padding: 20px 10%; /* Added padding-top to create space at the top */
+    height: 120px;
+    padding: 20px 10%;
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -86,19 +86,18 @@ header nav:hover > a:not(:hover) {
 .projects {
     padding: 0px 30% 50px 5%;
     flex: 1;
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack projects vertically */
+    display: flex;
+    flex-direction: column;
     padding: 0 10%;
 }
 
-/* Style for the short description */
 .short-description {
     display: block;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 10px;
-    opacity: 1; /* Ensure short description is visible */
-    transition: opacity 0.3s ease; /* Add opacity transition */
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .project {
@@ -109,12 +108,12 @@ header nav:hover > a:not(:hover) {
     margin-bottom: 20px;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, height 0.5s; /* Add transitions for transform, box-shadow, and height */
+    transition: transform 0.3s, box-shadow 0.3s, height 0.5s;
 }
 
 .project:hover {
-    transform: translateY(-5px); /* Example transformation */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Example box shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     background-color: rgba(201, 191, 255, 0.9);
 }
 
@@ -126,14 +125,14 @@ header nav:hover > a:not(:hover) {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: calc(100% - 200px); /* Adjust width to be smaller on the sides */
-    max-width: 800px; /* Limit maximum width if needed */
+    width: calc(100% - 200px);
+    max-width: 800px;
     max-height: 80%;
-    transform: translate(-50%, -50%); /* Center the box */
+    transform: translate(-50%, -50%);
     z-index: 1000;
     overflow-y: auto;
     background: rgba(255, 255, 255, 1);
-    padding: 40px 40px 20px; /* Adjust padding: top, right/left, bottom */
+    padding: 40px 40px 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     cursor: default;
@@ -162,13 +161,13 @@ header nav:hover > a:not(:hover) {
 }
 
 .project.expanded .close-btn:hover {
-    background: darkred; /* Darken the background on hover */
+    background: darkred;
 }
 
 .project.expanded .project-details {
-    display: block; /* Display project details when expanded */
+    display: block;
     opacity: 1;
-    margin-top: 10px; /* Adjust margin top as needed */
+    margin-top: 10px;
 }
 
 #overlay {
@@ -180,7 +179,7 @@ header nav:hover > a:not(:hover) {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 500;
-    backdrop-filter: blur(5px); /* Apply background blur */
+    backdrop-filter: blur(5px);
 }
 
 body.no-scroll {
@@ -188,10 +187,66 @@ body.no-scroll {
 }
 
 .project-details {
-    display: none; /* Initially hide project details */
+    display: none;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Add opacity transition */
+    transition: opacity 0.3s ease;
 }
+
+.project .image-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project .image-container img {
+    width: calc(33.33% - 10px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    transition: display 0.3s ease;
+}
+
+.image-modal .close-image-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.image-modal .close-image-modal:hover,
+.image-modal .close-image-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-modal .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
 
 footer {
     padding: 20px;

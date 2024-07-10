@@ -128,3 +128,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(nextSlide, 3000); // Change image every 3 seconds
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.project .image-container img');
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-image');
+    const closeModal = document.querySelector('.close-image-modal');
+
+    images.forEach(image => {
+        image.addEventListener('click', function () {
+            modal.style.display = 'flex';
+            modalImg.src = this.src;
+            document.body.classList.add('no-scroll'); // Prevent scrolling
+        });
+    });
+
+    closeModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Allow scrolling
+    });
+
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Allow scrolling
+        }
+    });
+});

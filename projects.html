@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
-        <img src="assets/JM.png">
+        <a href="https://www.twitch.tv/yourchannel" target="_blank">
+            <img src="assets/JM.png">
+        </a>
         <nav>
             <a href="index.html">Home</a>
             <a href="#" class="active">Projects</a>
@@ -24,8 +26,6 @@
     </section>
 
     <section class="projects">
-
-
         <div class="project">
             <h2>Zombie Survival Game</h2>
             <p> [04/2024 - PRESENT] </p>
@@ -42,12 +42,17 @@
             <p class="short-description">A journey of diagnosing and repairing a broken PC...</p>
             <div class="project-details">
                 <p>2 years ago, I was gifted a broken PC with problem after problem of a mix between software and hardware faults. Over the course of 2 years, I learned how to diagnose broken PC parts, navigate the BIOS, and use the cmd to repair outdated and broken Windows software. Lastly, the original wiring of the PC was very rushed and put together in a way that could further damage the PC long-term, so as the final step of the PC restoration, I rewired all the main components/wires to complete the build and make the PC look well-built and practically brand new.</p>
+                <div class="image-container">
+                    <img src="project-media/before.JPG">
+                    <img src="project-media/after.JPG">
+                    <img src="project-media/plug.jpg">
+                </div>
             </div>
             <button class="close-btn">X</button>
         </div>
 
         <div class="project">
-            <h2>Riot Games Quality Assurance </h2>
+            <h2>Riot Games Quality Assurance</h2>
             <p> [06/2022 - 08/2022] </p>
             <p class="short-description">The creation of UI features to be used in the hit game, VALORANT...</p>
             <div class="project-details">
@@ -57,7 +62,7 @@
         </div>
 
         <div class="project">
-            <h2>This Website </h2>
+            <h2>This Website</h2>
             <p> [01/2023 - PRESENT] </p>
             <p class="short-description">coded by Jameel :o</p>
             <div class="project-details">
@@ -65,8 +70,6 @@
             </div>
             <button class="close-btn">X</button>
         </div>
-
-
     </section>
 
     <footer>
@@ -74,6 +77,12 @@
     </footer>
 
     <div id="overlay"></div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal">
+        <span class="close-image-modal">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
 
     <script src="script.js"></script>
 </body>
