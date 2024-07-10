@@ -104,18 +104,47 @@ header nav:hover > a:not(:hover) {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
-    max-width: 500px; /* Set max-width to 500px */
+    max-width: 500px;
     transition: all 0.5s ease;
     z-index: 2;
     position: relative;
-    cursor: pointer; /* Add cursor pointer to indicate hover */
+    cursor: pointer;
 }
 
 .about-content:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add a stronger shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     background-color: rgb(9, 23, 28);
 }
+
+.about-content.expanded ~ .about-extra {
+    opacity: 1;
+}
+
+.about-content.expanded ~ .left-box {
+    transform: translateX(-420px);
+}
+
+.about-content.expanded ~ .right-box {
+    transform: translateX(420px);
+}
+
+.about-content:not(.expanded) ~ .about-extra {
+    opacity: 0;
+}
+
+.about-content:not(.expanded) ~ .left-box {
+    transform: translateX(0);
+}
+
+.about-content:not(.expanded) ~ .right-box {
+    transform: translateX(0);
+}
+
+.about-content:not(.expanded) ~ .minifigure {
+    top: 100px;
+}
+
 
 .about h1 {
     font-size: 40px;
