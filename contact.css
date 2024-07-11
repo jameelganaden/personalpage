@@ -67,7 +67,7 @@ header nav:hover > a:not(:hover) {
     display: flex;
     justify-content: center;
     align-items: end;
-    height: 70vh; /* Adjust the height as needed */
+    height: 65vh; /* Adjust the height as needed */
     margin-bottom: 20px; /* Add margin bottom for gap */
 }
 
