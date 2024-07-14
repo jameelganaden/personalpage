@@ -276,24 +276,24 @@ header nav:hover > a:not(:hover) {
     border-radius: 1px; /* Optional: round ends */
 }
 
-.modules3_5, .modules7_9 {
+.modules3_5, .modules7_9, .modules10_12 {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-bottom: 10px; /* Spacing between titles and videos */
 }
 
-.modules3_5 span, .modules7_9 span {
+.modules3_5 span, .modules7_9 span, .modules10_12 span {
   flex: 1;
   margin: 0 10px; /* Adjust spacing between titles */
 }
 
-.vids3_5, .vids7_9 {
+.vids3_5, .vids7_9, .vids10_12 {
   display: flex;
   justify-content: space-between;
 }
 
-.vids3_5 iframe, .vids7_9 iframe {
+.vids3_5 iframe, .vids7_9 iframe, .vids10_12 iframe{
   flex: 1;
   margin: 0 10px; /* Adjust spacing between videos */
   width: calc(33.33% - 20px); /* Adjust width to fit within container */
